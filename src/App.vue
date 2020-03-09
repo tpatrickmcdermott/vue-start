@@ -13,6 +13,7 @@
 </template>
 
 <script>
+
   import EmployeeTable from '@/components/EmployeeTable.vue';
   import EmployeeForm from '@/components/EmployeeForm.vue';
 
@@ -31,7 +32,9 @@
         const id = lastId + 1;
         const newEmployee = { ...employee, id };
         this.employees = [...this.employees, newEmployee];
+
         console.log(this);
+        console.log(this.employees);
       },
       deleteEmployee(id) {
         this.employees = this.employees.filter(
